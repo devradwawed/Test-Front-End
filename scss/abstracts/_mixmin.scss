@@ -1,0 +1,29 @@
+@mixin  Trans {
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+
+@mixin  Xs {
+  @media(max-width:575px){
+    @content;
+  }
+}
+
+@mixin Sm {
+  @media(max-width:768px){
+    @content;
+}
+}
+@mixin Md {
+  @media  (max-width:991px){
+    @content;
+}
+}
+@mixin Lg {
+  @media(min-width:1171px){
+    @content;
+}
+}

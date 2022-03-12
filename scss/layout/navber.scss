@@ -1,0 +1,99 @@
+/* =======================
+  start navber
+======================= */
+nav{
+  background-color: #fff;
+  .navbar-brand{
+    background: $bgPrimary;
+    border: 1px solid $bgPrimary;
+    display: inline-block;
+    padding: 0.5rem 4.3rem;
+    border-radius: 2px;
+    color: $textColor;
+    font-weight: 500;
+  }
+  .navbar-collapse {
+    flex-grow: unset;
+    .navbar-nav{
+      .nav-item {
+        margin-left: 1.6rem;
+        .nav-link{
+          color: $textColor;
+          font-weight: 500;
+        }
+        .dropdown-menu{
+          display: none;
+          top: 130%;
+          @include Trans;
+          min-width: 5rem;
+          border: 0;
+        }
+        &:hover .dropdown-menu{
+          display: block;
+        }
+      }
+    }
+  }
+  .navbar-toggler{
+    border: 0;
+    outline: none !important;
+    &:focus{
+      overflow: none;
+      box-shadow: none;
+    }
+  }
+}
+@include Md{
+  .navbar{
+    background-color: #fff;
+    padding: 1.2rem 0;
+
+    .navbar-brand{
+      font-size: 2.5rem;
+    }
+    .navbar-toggler {
+      i{
+        font-size: 2.5rem;
+      }
+    }
+    .navbar-collapse{
+      background-color: #fff;
+      position: absolute;
+      width: 90%;
+      left: 5%;
+      top: 100%;
+      box-shadow: 0 0 2px #ccc;
+      z-index: 9999;
+      .nav-item {
+        .dropdown-menu{
+          opacity: 1;
+          visibility: visible;
+        }
+        .nav-link{
+          font-size: 1.4rem;
+        }
+        .dropdown-item{
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+@include Xs {
+  nav {
+    padding: 1.2rem 0;
+    .navbar-brand {
+      padding: 0rem 1.3rem;
+      font-size: 1.5rem !important;
+    }
+    .navbar-toggler {
+      i{
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+}
+
+/* =======================
+  end navber
+======================= */
